@@ -1,87 +1,58 @@
 /* Table of Contents
 
-0. CSS reset (based on Andy Bell's https://piccalil.li/blog/a-modern-css-reset/)
+1. Custom properties
 
-1. Other global styles
+2. CSS reset (based on Andy Bell's https://piccalil.li/blog/a-modern-css-reset/)
 
+3. Other global styles
+
+4. Typography
+
+5. Utility classes
+
+6. Components
 
 */
 
-/* ================
-   0. CSS reset
-   ================ */
+/* ====================
+   1. Custom properties
+   ===================== */
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+:root {
+  /* Colours */
+  --clr-dark: #1b1b1b;
+  --clr-light: 231 77% 90%;
+  --clr-white: white;
+  --clr-light-grey: #f7f7f7;
+  /* Wai  */
+  --clr-wai-1: hsl(186, 70%, 79%);
+  --clr-wai-2: hsl(187, 67%, 60%);
+  --clr-wai-3: hsl(189, 66%, 50%);
+  --clr-wai-4: hsl(192, 95%, 31%);
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
+  /* Wai 1 */
+  /* --clr-1: #046183;
+  --clr-2: #23CEE4;
+  --clr-3: #06A2CB;
+  --clr-4: #99F2E4; */
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
+  /* Wai 2 */
+  /* --clr-1: #3DB8E6;
+  --clr-2: #7FD7EF;
+  --clr-3: #A8E9F3;
+  --clr-4: #208BC5; */
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
+  /* Font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  /* Font-families */
+  /* --ff-serif: serif; */
+  --ff-sans-normal: 'Inter', sans-serif;
 }
