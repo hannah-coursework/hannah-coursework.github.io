@@ -221,6 +221,28 @@ h3 {
      6. Components
   ==================== */
 
+/* Primary navigation */
+
+.logo {
+  display: grid;
+  place-content: center;
+  color: hsl(var(--clr-wai-3));
+  font-size: var(--fs-500);
+}
+
+.primary-navigation {
+  --gap: 4rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  color: hsl(var(--clr-dark));
+}
+
 /* Footer */
 
 footer {
