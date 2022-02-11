@@ -215,3 +215,36 @@ h3 {
   margin-inline: auto;
   max-width: 80rem;
 }
+
+/* ===================
+     6. Components
+  ==================== */
+
+/* Footer */
+
+footer {
+  background-color: hsl(var(--clr-wai-3));
+  color: hsl(var(--clr-white));
+  list-style: none;
+  padding: 1rem;
+}
+
+footer p {
+  display: grid;
+  place-content: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+  font-size: var(--fs-700);
+}
+
+footer a:hover,
+footer a:focus {
+  color: hsl(var(--clr-yellow));
+}
