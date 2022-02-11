@@ -167,6 +167,7 @@ code {
   background-image: url(/assets/wai.jpg);
   background-size: cover;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
