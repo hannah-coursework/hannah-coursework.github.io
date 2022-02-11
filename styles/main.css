@@ -14,33 +14,21 @@
 
 */
 
-/* ====================
+/* =====================
    1. Custom properties
    ===================== */
 
 :root {
   /* Colours */
-  --clr-dark: #1b1b1b;
+  --clr-dark: 0, 0%, 11%;
   --clr-light: 231 77% 90%;
-  --clr-white: white;
-  --clr-light-grey: #f7f7f7;
-  /* Wai  */
-  --clr-wai-1: hsl(186, 70%, 79%);
-  --clr-wai-2: hsl(187, 67%, 60%);
-  --clr-wai-3: hsl(189, 66%, 50%);
-  --clr-wai-4: hsl(192, 95%, 31%);
-
-  /* Wai 1 */
-  /* --clr-1: #046183;
-  --clr-2: #23CEE4;
-  --clr-3: #06A2CB;
-  --clr-4: #99F2E4; */
-
-  /* Wai 2 */
-  /* --clr-1: #3DB8E6;
-  --clr-2: #7FD7EF;
-  --clr-3: #A8E9F3;
-  --clr-4: #208BC5; */
+  --clr-white: 0, 0%, 100%;
+  --clr-light-grey: 0, 0%, 97%;
+  --clr-yellow: 55, 100%, 71%;
+  --clr-wai-1: 186, 70%, 79%;
+  --clr-wai-2: 187, 67%, 60%;
+  --clr-wai-3: 189, 66%, 50%;
+  --clr-wai-4: 192, 95%, 31%;
 
   /* Font-sizes */
   --fs-900: 9.375rem;
@@ -53,8 +41,9 @@
   --fs-200: 0.875rem;
 
   /* Font-families */
-  /* --ff-serif: serif; */
   --ff-sans-normal: 'Inter', sans-serif;
+  --ff-mono: 'Roboto', sans-serif;
+  /* --ff-serif: serif; */
 }
 /* ================
    2. Reset
@@ -133,4 +122,70 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ======================
+   3. Other global styles
+   ====================== */
+::selection {
+  background-color: hsl(var(--clr-wai-1));
+  color: hsl(var(--clr-dark));
+}
+
+/* ================
+     4. Typography
+   ================ */
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  color: hsl(var(--clr-dark));
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--clr-wai-3));
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+  color: hsl(var(--clr-wai-4));
+}
+
+code {
+  font-family: var(--ff-mono);
+  background-color: hsl(var(--clr-light-grey));
+}
+
+/* Header title text */
+.image-text {
+  background-image: url(/assets/wai.jpg);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: var(--fs-400);
+  text-transform: uppercase;
+  font-size: calc(2rem + 6vw);
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  color: hsl(var(--clr-wai-4));
+  font-size: var(--fs-700);
+}
+
+h3 {
+  color: hsl(var(--clr-wai-3));
+  font-size: var(--fs-500);
 }
