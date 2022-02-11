@@ -84,6 +84,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -246,6 +248,7 @@ h3 {
 /* Footer */
 
 footer {
+  margin-top: auto;
   background-color: hsl(var(--clr-wai-3));
   color: hsl(var(--clr-white));
   list-style: none;
