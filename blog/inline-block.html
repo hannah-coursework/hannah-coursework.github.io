@@ -97,7 +97,7 @@
           and naturally expect from these elements. A paragraph wouldn't be a
           paragraph if it didn't start on a new line.
         </p>
-        <p>Inline elements include HTML tags like:</p>
+        <p>Inline elements, on the other hand,include HTML tags like:</p>
         <ul>
           <li>Links</li>
           <li>Italic font</li>
@@ -105,31 +105,32 @@
           <li>Spans</li>
         </ul>
         <p>
-          They don't automatically start a new line. They just continue along
-          inline with what came before them. Again this makes sense. You
-          wouldn't want to be forced to start a new line every time you added a
-          link to your text or when you decorate your text with bold or italic
+          They don't automatically start a new line. They just continue along in
+          line with what came before them. Again, this makes sense. You wouldn't
+          want to be forced to start a new line every time you added a link to
+          your text or whenever you decorated your text with bold or italic
           fonts.
         </p>
         <p>
           The thing about inline elements is that you can't give them a height,
-          or add margins or padding to their top or bottom.In many cases, this
+          or add margins or padding to their top or bottom. In many cases, this
           is exactly what you'd want because if you added height, padding or
-          margin to the top/bottom of your links and italic text in the middle
-          of a paragraph, you would cause trouble. You'd end up with ugly blank
+          margin to the top/bottom of your links or italic text in the middle of
+          a paragraph, you would cause trouble. You'd end up with ugly blank
           space around the words in the rest of that line.
         </p>
         <p>
           But, sometimes you really do want to do things to an inline element
-          that will change its height. One good example is when you want to
-          style a link as a button. Remember a link's natural state is as an
-          inline element, so how can we add padding to turn it into a button? By
-          explicitly setting its <code>display</code>property to
+          that will change its height. One good example is styling a link as a
+          button. Remember a link's natural state is as an inline element, so
+          how can we add padding and turn it into a button? By explicitly
+          setting its <code>display</code> property to
           <code>display: inline-block</code>. <code>inline-block</code> allows
           you do things to inline elements that you could usually only do with
-          block elements, like adding padding top and bottom to make a button
-          while still remaining in line. This allows you to put two links styled
-          as buttons side by side.
+          block elements – like add padding top and bottom to make a button. The
+          useful thing is your <code>inline-block</code> elements still remain
+          in line. This allows you to put two links styled as buttons side by
+          side.
         </p>
       </article>
     </main>
