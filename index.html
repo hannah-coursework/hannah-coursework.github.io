@@ -16,12 +16,11 @@
     />
     <meta property="og:url" content="https://hannah-coursework.github.io/" />
     <!-- Font Awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+    <script
+      src="https://kit.fontawesome.com/757a7d392f.js"
       crossorigin="anonymous"
-    />
+    ></script>
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,21 +31,31 @@
     <!-- Custom CSS -->
     <link href="../styles/main.css" rel="stylesheet" type="text/css" />
     <title>Hannah's Bootcamp Blog</title>
+    <script src="/scripts/nav.js" defer></script>
   </head>
   <body>
-    <!-- header -->
+    <!-- primary header -->
     <header class="primary-header flex">
       <div class="logo">
-        <p>
-          <i class="fas fa-chevron-left"></i><i class="fas fa-heading"></i
-          ><i class="fas fa-chevron-right"></i>
-        </p>
+        <i class="fa-solid fa-circle-h"></i>
       </div>
       <!-- nav -->
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+        <i id="toggle-icon" class="fas fa-bars"></i>
+      </button>
       <nav>
-        <ul class="primary-navigation underline-indicators flex">
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
           <li class="active"><a href="#about">About</a></li>
-          <li><a href="./blog/index.html">Blog</a></li>
+          <li><a href="#latest-posts">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -57,8 +66,9 @@
         <h1 class="image-text">Hannah's Bootcamp Blog</h1>
         <h2>About</h2>
         <p>
-          Kia ora, I'm Hannah 👋 I'm a web developer from Aotearoa New Zealand.
-          This website contains some of the coursework I have done as part of
+          Kia ora, <code>test code</code> I'm Hannah 👋 I'm a web developer from
+          Aotearoa New Zealand. This website contains some of the coursework I
+          have done as part of
           <a href="https://devacademy.co.nz/">Dev Academy</a>'s
           <a href="https://devacademy.co.nz/course-details/">
             Web Development Bootcamp</a

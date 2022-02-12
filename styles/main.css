@@ -10,7 +10,9 @@
 
 5. Utility classes
 
-6. Components
+6. Layout
+
+7. Media queries
 
 */
 
@@ -88,6 +90,7 @@ body {
   flex-direction: column;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden; /* for mobile menu issues */
 }
 
 /* A elements that don't have a class get default styles */
@@ -219,15 +222,35 @@ h3 {
   max-width: 80rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
 /* ===================
-     6. Components
+     6. Layout
   ==================== */
+
+/* Primary header */
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
 
 /* Primary navigation */
 
 .logo {
   display: grid;
   place-content: center;
+  margin: 2rem;
   color: hsl(var(--clr-wai-3));
   font-size: var(--fs-500);
 }
@@ -243,6 +266,50 @@ h3 {
 .primary-navigation a {
   text-decoration: none;
   color: hsl(var(--clr-dark));
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    --gap: 2em;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+
+    padding: min(30vh, 10rem) 2em;
+    background: hsl(var(--clr-wai-4), 0.96);
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+      background: hsl(var(--clr-wai-4), 0.6);
+      backdrop-filter: blur(1rem);
+    }
+  }
+
+  .primary-navigation[data-visible='true'] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    border: 0;
+    background: none;
+    width: 1rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    font-size: var(--fs-500);
+  }
 }
 
 /* Footer */
@@ -273,4 +340,30 @@ footer a {
 footer a:hover,
 footer a:focus {
   color: hsl(var(--clr-yellow));
+}
+
+/* ===================
+     7. Media queries
+   =================== */
+
+/* X-Small devices (portrait phones, less than 576px): no media query as this is the default */
+
+/* 5.1 Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* 5.2 Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* 5.3 Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* 5.4 X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* 5.5 XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 }
