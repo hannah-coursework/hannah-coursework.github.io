@@ -23,3 +23,13 @@ primaryNav.addEventListener('click', () => {
   mobileNavToggle.setAttribute('aria-expanded', false);
   toggleIcon.setAttribute('class', 'fas fa-bars');
 });
+
+//
+let resizeTimer;
+window.addEventListener('resize', () => {
+  document.body.classList.add('resize-animation-stopper');
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove('resize-animation-stopper');
+  }, 400);
+});

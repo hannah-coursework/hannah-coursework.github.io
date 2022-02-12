@@ -145,6 +145,13 @@ select {
 /* ======================
    3. Other global styles
    ====================== */
+
+/* Stop animations firing when window resizes */
+/* https://css-tricks.com/stop-animations-during-window-resizing/ */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
 ::selection {
   background-color: hsl(var(--clr-wai-1));
   color: hsl(var(--clr-dark));
