@@ -189,12 +189,24 @@ code {
   color: transparent;
 }
 
-h1 {
+.hero-text {
   font-family: sans-serif;
   font-weight: var(--fs-400);
   text-transform: uppercase;
   font-size: calc(3rem + 6vw);
   line-height: 1;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: var(--fs-400);
+  text-transform: uppercase;
+  font-size: var(--fs-700);
+  line-height: 1;
+  color: hsl(var(--clr-wai-4));
   text-align: center;
   margin: 0;
   margin-bottom: 1rem;
@@ -210,6 +222,13 @@ h3 {
   color: hsl(var(--clr-wai-3));
   font-size: var(--fs-500);
   margin-bottom: 0.3rem;
+}
+
+.eda-prompt {
+  color: hsl(var(--clr-wai-3));
+  font-size: var(--fs-400);
+  font-style: italic;
+  padding-bottom: min(20vh, 1em);
 }
 
 /* ====================
@@ -235,7 +254,11 @@ h3 {
 .container {
   padding-inline: 2em;
   margin-inline: auto;
-  max-width: 80rem;
+  max-width: var(--max-with, 80rem);
+}
+
+.blog-post {
+  --max-with: 50rem;
 }
 
 .sr-only {
