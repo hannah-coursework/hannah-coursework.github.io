@@ -348,6 +348,8 @@ h3 {
 
 footer {
   margin-top: auto;
+  align-items: center;
+  justify-content: space-between;
   background-color: hsl(var(--clr-wai-3));
   color: hsl(var(--clr-white));
   list-style: none;
