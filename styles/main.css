@@ -188,12 +188,12 @@ h1 {
 
 h2 {
   color: hsl(var(--clr-wai-4));
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
 }
 
 h3 {
   color: hsl(var(--clr-wai-3));
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
 }
 
 /* ====================
@@ -252,7 +252,11 @@ h3 {
   place-content: center;
   margin: 2rem;
   color: hsl(var(--clr-wai-3));
-  font-size: var(--fs-500);
+  font-size: var(--fs-600);
+}
+.logo a {
+  color: hsl(var(--clr-wai-3));
+  font-size: var(--fs-600);
 }
 
 .primary-navigation {
@@ -281,7 +285,7 @@ h3 {
     flex-direction: column;
 
     padding: min(30vh, 10rem) 2em;
-    background: hsl(var(--clr-wai-4), 0.96);
+    background: hsl(var(--clr-wai-3), 0.96);
 
     transform: translateX(100%);
     transition: transform 350ms ease-out;
@@ -289,7 +293,7 @@ h3 {
 
   @supports (backdrop-filter: blur(1rem)) {
     .primary-navigation {
-      background: hsl(var(--clr-wai-4), 0.6);
+      background: hsl(var(--clr-wai-3), 0.6);
       backdrop-filter: blur(1rem);
     }
   }
@@ -304,9 +308,9 @@ h3 {
     z-index: 9999;
     border: 0;
     background: none;
-    width: 1rem;
-    aspect-ratio: 1;
-    top: 2rem;
+    /* width: 1rem;
+    aspect-ratio: 1; */
+    /* top: 2rem; */
     right: 2rem;
     font-size: var(--fs-500);
   }
@@ -334,7 +338,7 @@ footer ul {
 footer a {
   color: hsl(var(--clr-white));
   text-decoration: none;
-  font-size: var(--fs-700);
+  font-size: var(--fs-500);
 }
 
 footer a:hover,
