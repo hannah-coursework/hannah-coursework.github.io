@@ -304,7 +304,7 @@ h3 {
 
   .mobile-nav-toggle {
     display: block;
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     border: 0;
     background: none;
@@ -313,6 +313,9 @@ h3 {
     /* top: 2rem; */
     right: 2rem;
     font-size: var(--fs-500);
+  }
+  .mobile-nav-toggle[aria-expanded='true'] {
+    position: fixed;
   }
 }
 
