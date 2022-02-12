@@ -261,7 +261,7 @@ h3 {
 
 .primary-navigation {
   --gap: 4rem;
-  --underline-gap: 2rem;
+  --underline-gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -270,6 +270,23 @@ h3 {
 .primary-navigation a {
   text-decoration: none;
   color: hsl(var(--clr-dark));
+}
+
+.underline-indicators * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-wai-3), 0);
+}
+
+.underline-indicators *:hover,
+.underline-indicators *:focus {
+  border-color: hsl(var(--clr-wai-3), 0.4);
+}
+
+.underline-indicators > .active {
+  /* color: hsl(var(--clr-wai-4), 1); */
+  border-color: hsl(var(--clr-wai-3), 1);
 }
 
 .mobile-nav-toggle {
@@ -316,6 +333,14 @@ h3 {
   }
   .mobile-nav-toggle[aria-expanded='true'] {
     position: fixed;
+  }
+}
+
+@media (min-width: 35em) {
+  .primary-navigation {
+    --gap: 3rem;
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
   }
 }
 
