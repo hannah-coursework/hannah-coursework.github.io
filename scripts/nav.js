@@ -24,7 +24,8 @@ primaryNav.addEventListener('click', () => {
   toggleIcon.setAttribute('class', 'fas fa-bars');
 });
 
-//
+// Stop animations firing when window resizes
+// https://css-tricks.com/stop-animations-during-window-resizing/
 let resizeTimer;
 window.addEventListener('resize', () => {
   document.body.classList.add('resize-animation-stopper');
