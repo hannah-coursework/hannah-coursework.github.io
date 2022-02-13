@@ -200,7 +200,7 @@ code {
   font-family: sans-serif;
   font-weight: var(--fs-400);
   text-transform: uppercase;
-  font-size: calc(3rem + 6vw);
+  font-size: calc(1rem + 6vw);
   line-height: 1;
   text-align: center;
   margin: 0;
@@ -271,6 +271,11 @@ h3 {
   --max-with: 50rem;
 }
 
+.homepage {
+  --max-with: 90vw;
+  --min-width: ;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -296,16 +301,25 @@ h3 {
 
 /* Primary navigation */
 
-.logo {
+/* .logo {
   display: grid;
   place-content: center;
   margin: 2rem;
   color: hsl(var(--clr-wai-3));
   font-size: var(--fs-600);
+} */
+
+.logo {
+  display: inline-block;
+  padding-left: 2rem;
+
+  color: hsl(var(--clr-wai-3));
+  font-size: var(--fs-700);
 }
+
 .logo a {
   color: hsl(var(--clr-wai-3));
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
 }
 
 .primary-navigation {
@@ -343,6 +357,10 @@ h3 {
 }
 
 @media (max-width: 35em) {
+  .logo {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
   .primary-navigation {
     --gap: 2em;
     position: fixed;
@@ -420,10 +438,12 @@ footer {
 footer p {
   display: grid;
   place-content: center;
+  padding-bottom: 0;
 }
 
 footer ul {
   list-style: none;
+  padding-right: 1rem;
 }
 
 footer a {
@@ -450,7 +470,9 @@ footer a:focus {
   background-position: center;
   padding: 10rem 0 0;
   outline: 3px solid hsl(var(--clr-wai-3));
-  max-width: 35ch;
+  /* max-width: 35ch; */
+  max-width: 100%;
+  display: block;
   border-radius: 1rem;
   overflow: hidden; /* needed to make bottom corners rounded due to card-content */
   transition: transform 500ms ease;
