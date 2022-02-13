@@ -184,7 +184,19 @@ a:visited {
 
 code {
   font-family: var(--ff-mono);
-  background-color: hsl(var(--clr-light-grey));
+  background-color: #80808046;
+  letter-spacing: 0.2ch;
+}
+
+.code-block {
+  font-family: var(--ff-mono);
+  font-stretch: expanded;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  letter-spacing: 0.2ch;
+  margin-bottom: 0.5rem;
 }
 
 /* Header title text */
@@ -469,7 +481,7 @@ footer a:focus {
   background-size: cover;
   background-position: center;
   padding: 10rem 0 0;
-  outline: 3px solid hsl(var(--clr-wai-3));
+  border: 3px solid hsl(var(--clr-wai-3));
   /* max-width: 35ch; */
   max-width: 100%;
   display: block;

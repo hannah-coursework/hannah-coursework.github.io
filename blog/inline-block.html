@@ -132,6 +132,112 @@
           in line. This allows you to put two links styled as buttons side by
           side.
         </p>
+        <p>
+          Here are some code examples to show the differences. In this first
+          example, I've styled a link as a button, without remembering to set
+          its display to <code>display: inline-block</code>. Here's my code.
+        </p>
+        <h2>display:inline</h2>
+        <h3>CSS</h3>
+        <p>
+          Note this same CSS is used in all of the examples. The only difference
+          in each case are the utility classes applied in the HTML.
+        </p>
+        <div class="code-block">
+          <p>
+            .btn { <br />
+            margin-top: 50px; <br />
+            margin-bottom: 50px;<br />
+            padding: 20px;<br />
+            background-color: hsl(55, 100%, 71%); <br />
+            text-decoration: none; <br />
+            color: black;<br />
+            }
+          </p>
+          <p>
+            .inline-block { <br />
+            display: inline-block;<br />
+            }<br />
+          </p>
+          <p>
+            .block {<br />
+            display: block; <br />}
+          </p>
+          <p>
+            * { <br />
+            outline: 1px solid hsl(192, 95%, 31%);
+            <br />
+
+            }
+          </p>
+        </div>
+        <h3>HTML</h3>
+        <div class="code-block">
+          <p>
+            &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;display:
+            inline&lt;/a&gt;
+          </p>
+        </div>
+        And, below is the result – not at all what we want. This happens because
+        links' default display is <code>display:inline</code>.
+        <img
+          src="../assets/blog-images/inline.png"
+          alt="What a link styled as a button looks like without inline-block"
+        />
+        <h2>display: block</h2>
+        <p>
+          Now, here's what would happen if we set the display on our
+          button-styled links to <code>display: block</code>. Notice how the
+          buttons have a width of 100% of their parent element. Also, notice how
+          they stack one on top of the other.
+        </p>
+        <h3>HTML</h3>
+        <div class="code-block">
+          <p>
+            &lt;a class=&quot;btn block&quot; href=&quot;#&quot;&gt;display:
+            block&lt;/a&gt;
+          </p>
+
+          <p>
+            &lt;a class=&quot;btn block&quot; href=&quot;#&quot;&gt;display:
+            block&lt;/a&gt;
+          </p>
+        </div>
+        <img
+          src="../assets/blog-images/block.png"
+          alt="What links styled as buttons look like with their display set to block."
+        />
+        <h2>display: inline-block</h2>
+        <p>
+          If you are styling links as buttons, it is most likely that you want
+          them to be able to sit one alongside the other, like this.
+        </p>
+        <img
+          src="../assets/blog-images/inline-block.png"
+          alt="What links styled as buttons look like with their display set to inline-block."
+        />
+        <p>Here's the code you'd use to achieve this.</p>
+        <p>HTML</p>
+        <div class="code-block">
+          <p>
+            &lt;a class=&quot;btn inline-block&quot; href=&quot;#&quot;>display:
+            inline-block&lt;/a&gt;
+          </p>
+
+          <p>
+            &lt;a class=&quot;btn inline-block&quot; href=&quot;#&quot;>display:
+            inline-block&lt;/a&gt;
+          </p>
+        </div>
+
+        <p>
+          Here are all three display types again so that you can compare them
+          side by side.
+        </p>
+        <img
+          src="../assets/blog-images/inline-vs-inline-block.png"
+          alt="Black and white photograph of a dog and a rabbit"
+        />
       </article>
     </main>
     <!-- Footer -->
