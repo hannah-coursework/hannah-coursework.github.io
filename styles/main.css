@@ -415,9 +415,10 @@ h3 {
 
 /* Sections */
 
-section {
+/* section {
   padding-block: min(20vh, 1rem);
-}
+} */
+/* See end of stylesheet – temporary specific breakpoints added for EDA assessment */
 
 p {
   padding-bottom: min(20vh, 1rem);
@@ -529,4 +530,30 @@ footer a:focus {
   background-color: hsl(var(--clr-wai-1));
   text-decoration: none;
   color: hsl(var(--clr-wai-4));
+}
+
+/* Media Queries for EDA Assessment (The site was already fully responsive but didn't use the specific breakpoints mentioned in the COmpetency Requirements, so I've added these tweaks in case having media queries for those break points was mandatory  */
+
+@media (max-width: 320px) {
+  section {
+    padding-block: 0px;
+  }
+}
+
+@media (min-width: 320px) {
+  section {
+    padding-block: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-block: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding-block: 1rem;
+  }
 }
